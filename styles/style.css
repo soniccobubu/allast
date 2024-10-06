@@ -155,11 +155,12 @@ article:has(.g-table){
 }
 
 .g-table {
-    width: 60%;
+    width: 600px;
+    height: 200px;
     display: grid;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
-    gap: 10px; /* Отступы между ячейками */
+    margin: 0;
+    grid-template-columns: repeat(3, minmax(0, 0.5fr));/* 3 колонки одинаковой ширины */
+    gap: 5px; /* Отступы между ячейками */
     border: 2px solid black; /* Граница для всей таблицы */
     padding: 10px;
     background-color: #f2f2b2;
@@ -167,7 +168,7 @@ article:has(.g-table){
 
 .g-table > div {
     border: 1px solid black; /* Границы ячеек */
-    padding: 8px;
+    padding: 4px;
     text-align: center; /* Выравнивание текста по центру */
     background-color: #ff5722;
 }
@@ -181,18 +182,7 @@ article:has(.g-table){
 }
 
 @media only screen and (max-width: 600px) {
-    .g-table {
-        width: 100%; /* Занимаем всю ширину экрана */
-        grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Колонки адаптируются */
 
-        display: grid;
-        /*grid-template-columns: repeat(3, 1fr); /* 3 колонки по 300px каждая */
-        gap: 10px; /* Отступы между ячейками */
-        border: 2px solid black; /* Граница для всей таблицы */
-        padding: 10px;
-        background-color: #f2f2b2;
-        margin: 0;
-    }
     .banner h1 {
         position: absolute;
         top: 50%;
