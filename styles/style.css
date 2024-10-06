@@ -155,11 +155,10 @@ article:has(.g-table){
 }
 
 .g-table {
-    width: 600px;
-    height: 200px;
+    width: 60%;
     display: grid;
-    margin: 0;
-    grid-template-columns: repeat(3, minmax(0, 0.5fr));/* 3 колонки одинаковой ширины */
+    margin: 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));/* 3 колонки одинаковой ширины */
     gap: 5px; /* Отступы между ячейками */
     border: 2px solid black; /* Граница для всей таблицы */
     padding: 10px;
@@ -182,7 +181,16 @@ article:has(.g-table){
 }
 
 @media only screen and (max-width: 600px) {
-
+    .g-table {
+        width: 100%;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, minmax(0, 1fr));/* 3 колонки одинаковой ширины */
+        gap: 5px; /* Отступы между ячейками */
+        border: 2px solid black; /* Граница для всей таблицы */
+        padding: 10px;
+        background-color: #f2f2b2;
+    }
     .banner h1 {
         position: absolute;
         top: 50%;
