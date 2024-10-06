@@ -182,7 +182,7 @@ article:has(.g-table){
 
 @media only screen and (max-width: 600px) {
     .g-table {
-        width: 90%; /* Занимаем всю ширину экрана */
+        width: 100%; /* Занимаем всю ширину экрана */
         grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Колонки адаптируются */
 
         display: grid;
