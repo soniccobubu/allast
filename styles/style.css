@@ -1,0 +1,238 @@
+body, header, section, main, footer {
+    width: 100%;
+}
+body{
+    margin: 0;
+}
+nav.topchik {
+    background-color: lightpink;
+    width: 100%;
+}
+li.topchik {
+    display: inline-grid;
+}
+a.topchik {
+    display: block;
+    padding: 14px 10px;
+    background-color: #D8BFD8;
+
+    text-decoration: none;
+
+
+
+
+
+}
+a:hover {
+    background-color: hotpink !important;
+}
+footer {
+    width: 100%;
+    background-color: midnightblue;
+    color: white;
+}
+
+.text-purple{
+    color: purple;
+}
+.text-big{
+   font-size:40px;
+}
+.element-bordered{
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: hotpink;
+}
+.banner-heading {
+    position: absolute;
+    top: 50%; /* Встановлює верхній край елемента на 50% від висоти батьківського контейнера. Це означає, що елемент буде зміщений вниз на половину висоти контейнера. */
+    left: 50%; /* Встановлює лівий край елемента на 50% від ширини батьківського контейнера. Це зміщує елемент вправо на половину ширини контейнера. */
+    color: white; /* Встановлює колір тексту білим. */
+    /*text-transform: uppercase; /* Примусово переводить весь текст у верхній регістр (великі літери). */
+    font-size: 200%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+}
+main {
+    width: 100%;
+    background-color: plum;
+    flex-grow: 4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 20px 0;
+}
+aside {
+    display: none;
+    position: absolute;
+}
+section {
+    max-height: 200px;
+}
+.footer-nav nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.content-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Баннер */
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    z-index: 1;
+    background: url('images/banner-image.jpg') no-repeat center;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.image {
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: saddlebrown;
+    text-align: center;
+    font-size: 2em;
+    z-index: 2;
+}
+.text {
+    margin-left: 10px;
+
+}
+.responsive-image {
+    position:absolute;
+    width: 100%; /* Картинка занимает всю ширину родительского элемента */
+    height: auto; /* Высота подстраивается под пропорции изображения */
+    display: block; /* Убирает пробелы, которые могут возникать между изображением и элементами вокруг */
+    margin: 0 auto;
+    object-fit: cover;
+    align-items: flex-start;
+    overflow: hidden;
+    top: 0; /* Прикрепляем к верхней части экрана */
+    left: 0;
+
+}
+
+table {
+    border-collapse: collapse; /* Убирает двойные границы между ячейками */
+    width: 100%;
+    border: 2px solid black; /* Устанавливает границу для таблицы */
+}
+
+th, td {
+    border: 1px solid black; /* Устанавливает границу для ячеек */
+    padding: 8px; /* Отступ внутри ячеек */
+    text-align: left;
+}
+
+th {
+    background-color: #f8d2f2; /* Цвет фона для заголовков */
+}
+
+
+article:has(.g-table){
+    width: 100%;
+}
+
+.g-table {
+    width: 60%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
+    gap: 10px; /* Отступы между ячейками */
+    border: 2px solid black; /* Граница для всей таблицы */
+    padding: 10px;
+    background-color: #f2f2b2;
+}
+
+.g-table > div {
+    border: 1px solid black; /* Границы ячеек */
+    padding: 8px;
+    text-align: center; /* Выравнивание текста по центру */
+    background-color: #ff5722;
+}
+
+.g-header {
+    font-weight: bold;
+    /*background-color: #f2f2f2; /* Фон для заголовков */
+}
+.g-table > div.g-header {
+    background-color: #f2f2f2; /* Переопределение для заголовков */
+}
+
+@media only screen and (max-width: 600px) {
+    .g-table {
+        width: 90%; /* Занимаем всю ширину экрана */
+        grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Колонки адаптируются */
+
+        display: grid;
+        /*grid-template-columns: repeat(3, 1fr); /* 3 колонки по 300px каждая */
+        gap: 10px; /* Отступы между ячейками */
+        border: 2px solid black; /* Граница для всей таблицы */
+        padding: 10px;
+        background-color: #f2f2b2;
+        margin: 0;
+    }
+    .banner h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: saddlebrown;
+        text-align: center;
+        font-size: 1em;
+
+        z-index: 2;
+    }
+    .content-section {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+
+
+    .image {
+        flex-wrap: wrap;
+        align-items: flex-end;
+        width: 80%; /* Уменьшаем картинку до 50% ширины родительского элемента */
+        height: 80%;
+    }
+    .grid-table{
+        width: 60%;
+        max-width: 60%;
+        overflow-x: scroll;
+    }
+
+
+
+}
+
+td pre{
+    display: inline;
+    text-wrap: inherit;
+}
