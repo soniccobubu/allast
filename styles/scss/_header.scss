@@ -1,0 +1,40 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+body, header, section, main, footer {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+}
+.responsive-image {
+  position:absolute;
+  width: 100%; /* Картинка занимает всю ширину родительского элемента */
+  height: auto; /* Высота подстраивается под пропорции изображения */
+  display: block; /* Убирает пробелы, которые могут возникать между изображением и элементами вокруг */
+  margin: 0 auto;
+  object-fit: cover;
+  align-items: flex-start;
+  overflow: hidden;
+  top: 0; /* Прикрепляем к верхней части экрана */
+  left: 0;
+
+}
+nav.topchik {
+  background-color: v.$header_bgcolor;
+  width: 100%;
+}
+li.topchik {
+  display: inline-grid;
+}
+
+a.topchik {
+  @include m.block_padding(5px, 12px);
+  background-color: v.$top_bgcolor;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: v.$background_color !important;
+}

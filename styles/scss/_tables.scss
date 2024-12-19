@@ -1,0 +1,100 @@
+@use 'variables' as v;
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid v.$border_color;
+}
+
+th, td {
+  border: 1px solid v.$border_color; /* Устанавливает границу для ячеек */
+  padding: 8px; /* Отступ внутри ячеек */
+  text-align: left;
+}
+
+th {
+  background-color: v.$zc; /* Цвет фона для заголовков */
+}
+
+
+article:has(.g-table){
+  width: 100%;
+}
+
+.g-table {
+  width: 60%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));/* 3 колонки одинаковой ширины */
+  gap: 5px; /* Отступы между ячейками */
+  border: 2px solid v.$border_color; /* Граница для всей таблицы */
+  padding: 10px;
+  background-color: v.$background-colormedia;
+}
+
+.g-table > div {
+  border: 1px solid v.$border_color; /* Границы ячеек */
+  padding: 4px;
+  text-align: center; /* Выравнивание текста по центру */
+  background-color: #ff5722;
+}
+.g-header {
+  font-weight: bold;
+  /*background-color: #f2f2f2; /* Фон для заголовков */
+}
+.g-table > div.g-header {
+  background-color: #f2f2f2; /* Переопределение для заголовков */
+}
+.grid-table{
+  width: 60%;
+  max-width: 60%;
+  overflow-x: scroll;
+}
+.font-slider-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.font-slider-container input[type="range"] {
+  width: 300px;
+  margin-left: 10px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid black;
+}
+.controls {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="range"] {
+  margin-top: 10px;
+  width: 300px;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #800020; /* Бордовий колір */
+  color: white; /* Білий текст */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Злегка округлені кути */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #a30029; /* Трохи яскравіший бордовий при наведенні */
+}
+
+
+.resizable {
+  width: auto;
+  transition: width 0.3s ease; /* Додамо плавність для зміни ширини */
+}
+

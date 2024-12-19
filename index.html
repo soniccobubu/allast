@@ -8,7 +8,6 @@
 
     <title>Збірник аніме</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 
 
@@ -17,7 +16,7 @@
 <body>
 <header>
     <div class="w3-bar">
-    <nav  class="topchik">
+    <nav class="topchik">
         <ul>
             <li  class="topchik">
                 <a class=" topchik w3-bar-item  w3-hide-small" href="login.html">Головна</a>
@@ -38,16 +37,7 @@
         <a href="#" class="topchik w3-bar-item ">Контакти анімешок</a>
     </div>
 
-    <script>
-        function myFunction() {
-            var x = document.getElementById("demo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-    </script>
+
 </header>
 <section class="content-section">
     <div class="banner">
@@ -56,21 +46,9 @@
     </div>
 </section>
 
-<aside>
-    <nav>
-        <ul>
-            <li><a class="text-yellow"
-                   href="https://shikimori.one/collections/3981-500-samyh-populyarnyh-anime-na-shikimori">Shikimori</a>
-            </li>
-            <li><a href="https://findanime.net/collection/sbornik_mnogoseriinogo_anime">Collection</a></li>
-            <li><a href="https://jut.su/anime/order-by-count/page-11/">Jutsu</a></li>
 
-        </ul>
-        `
-    </nav>
-</aside>
 
-<main>
+<main id="mainContent">
 
 
     <div>
@@ -93,22 +71,72 @@
             <span style="color: rgba(100, 100, 100, 1);"><b>Тільки тут!</b></span>
         </h6>
 
+
     </div>
 
     <div>
         <img class="image" src="images/collection.jpg" alt="Manga">
     </div>
+    <article>
+        <div>
+            <button id="changeColorButton">Змінити колір фону</button>
+        </div>    <label for="red">Red:</label>
+        <input type="number" id="red" min="0" max="255" placeholder="0-255"><br><br>
 
+        <label for="green">Green:</label>
+        <input type="number" id="green" min="0" max="255" placeholder="0-255"><br><br>
+
+        <label for="blue">Blue:</label>
+        <input type="number" id="blue" min="0" max="255" placeholder="0-255"><br><br>
+
+        <!-- Кнопка для зміни кольору фону -->
+        <button id="enterButton">Enter</button>
+    </article>
     <article>
         <div class="text">
             <p><i class="element-bordered"> Мета проєкту: поширювати аніме в маси</i></p></div>
         <div class="text"><p><i class="text-big">Завдання проєкту: поширювати аніме в маси ще більше</i></p>
             <p>
-            <blockquote>«Ви можете померти будь-коли, але для життя потрібна справжня мужність». – Кеншин Хімура
+            <blockquote >«Ви можете померти будь-коли, але для життя потрібна справжня мужність». – Кеншин Хімура
             </blockquote>
+            <label for="font-size-selector">Виберіть розмір шрифту:</label>
+            <select id="font-size-selector">
+                <option value="12px">12px</option>
+                <option value="16px" selected>16px</option>
+                <option value="20px">20px</option>
+                <option value="24px">24px</option>
+                <option value="28px">28px</option>
+            </select>
+
             </p>
         </div>
+        <div>
+            <aside>
+                <nav>
+                    <ul>
+                        <li><a class="text-yellow"
+                               href="https://shikimori.one/collections/3981-500-samyh-populyarnyh-anime-na-shikimori">Shikimori</a>
+                        </li>
+                        <li><a href="https://findanime.net/collection/sbornik_mnogoseriinogo_anime">Collection</a></li>
+                        <li><a href="https://jut.su/anime/order-by-count/page-11/">Jutsu</a></li>
+
+                    </ul>
+                    `
+                </nav>
+            </aside>
+        </div>
     </article>
+    <div class="controls">
+        <!-- Подпись для ползунка -->
+        <label for="font-size-slider"><strong>Змінити розмір шрифта таблиці:</strong></label>
+        <input type="range" id="font-size-slider" min="10" max="30" value="16">
+
+        <!-- Подпись для ползунка ширины -->
+
+        <!-- Кнопка сброса -->
+        <button id="reset-button">Скинути до початкових розмірів</button>
+    </div>
+
     <article>
         <table class="grid-table">
             <thead>
@@ -121,158 +149,158 @@
             <tbody>
             <tr>
                 <td>
-                    <pre>&lt;!DOCTYPE html&gt;</pre>
+                    &lt;!DOCTYPE html&gt;
                 </td>
-                <td>&lt;оголошення типу документа, вказує браузеру на тип HTML-версії, яку буде використовуватися&gt;
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <pre>&lt;html&gt;</pre>
-                </td>
-                <td>
-                    <pre>&lt;основний контейнер HTML-документа, в якому міститься весь контент сторінки.&gt;</pre>
+                <td>оголошення типу документа, вказує браузеру на тип HTML-версії, яку буде використовуватися
                 </td>
             </tr>
             <tr>
                 <td>
-                    <pre>&lt;head&gt;</pre>
+                    &lt;html&gt;
                 </td>
                 <td>
-                    <pre>&lt;секція документа для метаінформації про документ&gt;</pre>
+                    основний контейнер HTML-документа, в якому міститься весь контент сторінки.
                 </td>
             </tr>
-
             <tr>
                 <td>
-                    <pre>&lt;head&gt;</pre>
+                    head&gt;
                 </td>
                 <td>
-                    <pre>&lt;секція документа для метаінформації про документ&gt;</pre>
+                    секція документа для метаінформації про документ
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <pre>&lt;meta charset="UTF-8"&gt;</pre>
+                    &lt;head&gt;
                 </td>
                 <td>
-                    <pre>&lt;тег для встановлення кодування символів, використовується UTF-8.&gt;</pre>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <pre>&lt;title&gt;</pre>
-                </td>
-                <td>
-                    <pre>&lt;заголовок сторінки, який відображається на вкладці браузера.&gt;</pre>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <pre>&lt;p&gt;</pre>
-                </td>
-                <td>
-                    <pre>&lt;тег для абзаців тексту&gt;</pre>
+                    секція документа для метаінформації про документ
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <pre>&lt;ul&gt;</pre>
+                    &lt;meta charset="UTF-8"&gt;
                 </td>
                 <td>
-                    <pre>&lt;невпорядкований список &gt;</pre>
+                    тег для встановлення кодування символів, використовується UTF-8.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;title&gt;
+                </td>
+                <td>
+                    заголовок сторінки, який відображається на вкладці браузера.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;p&gt;
+                </td>
+                <td>
+                    тег для абзаців тексту
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <pre>&lt;li &gt;</pre>
+                    &lt;ul&gt;
                 </td>
                 <td>
-                    <pre>&lt;елементи списку, що містять посилання &gt;</pre>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <pre>&lt;div &gt;</pre>
-                </td>
-                <td>
-                    <pre>&lt;для групування елементів. &gt;</pre>
+                    невпорядкований список
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <pre>&lt;img &gt;</pre>
+                    &lt;li &gt;
                 </td>
                 <td>
-                    <pre>&lt; тег для додавання зображення на сторінку. &gt;</pre>
+                    елементи списку, що містять посилання
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    &lt;div &gt;
+                </td>
+                <td>
+                    для групування елементів.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    &lt;img &gt;
+                </td>
+                <td>
+                     тег для додавання зображення на сторінку.
                 </td>
             </tr>
 
 
             <tr>
                 <td>
-                    <pre>&lt;table &gt;</pre>
+                    &lt;table &gt;
                 </td>
                 <td>
-                    <pre>&lt;тег для створення таблиці.&gt;</pre>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <pre>&lt;thead &gt;</pre>
-                </td>
-                <td>
-                    <pre>&lt;заголовкова частина таблиці, яка містить назви колонок. &gt;</pre>
+                    тег для створення таблиці.
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <pre>&lt;tbody &gt;</pre>
+                    &lt;thead &gt;
                 </td>
                 <td>
-                    <pre>&lt;основна частина таблиці з даними. &gt;</pre>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <pre>&lt;th&gt;</pre>
-                </td>
-                <td>
-                    <pre>&lt;комірка заголовка в таблиці.&gt;</pre>
+                    заголовкова частина таблиці, яка містить назви колонок.
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <pre>&lt;tfoot&gt;</pre>
+                    &lt;tbody &gt;
                 </td>
                 <td>
-                    <pre>&lt;нижня частина таблиці, використовується для загальних підсумків або додаткової інформації.&gt;</pre>
+                    основна частина таблиці з даними.
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <pre>&lt;tr&gt;</pre>
+                    &lt;th&gt;
                 </td>
                 <td>
-                    <pre>&lt;рядок таблиці.&gt;</pre>
+                    комірка заголовка в таблиці.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    &lt;tfoot&gt;
+                </td>
+                <td>
+                    нижня частина таблиці, використовується для загальних підсумків або додаткової інформації.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    &lt;tr&gt;
+                </td>
+                <td>
+                    рядок таблиці.
                 </td>
             </tr>
             <tr>
                 <td>
-                    <pre>&lt;td&gt;</pre>
+                    &lt;td&gt;
                 </td>
                 <td>
-                    <pre>&lt;комірка з даними в таблиці.&gt;</pre>
+                    комірка з даними в таблиці.
                 </td>
             </tr>
 
@@ -281,14 +309,40 @@
 
             </tfoot>
         </table>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const fontSizeSlider = document.getElementById('font-size-slider');
+                const tableWidthSlider = document.getElementById('table-width-slider');
+                const resetButton = document.getElementById('reset-button');
+                const table = document.querySelector('table');
+
+
+                const initialFontSize = '16px';
+                const initialWidth = '50%';
+
+                fontSizeSlider.addEventListener('input', function () {
+                    const newFontSize = fontSizeSlider.value + 'px';
+                    table.style.fontSize = newFontSize;
+                });
+
+
+
+
+                resetButton.addEventListener('click', function () {
+                    fontSizeSlider.value = 16;
+
+
+                    table.style.fontSize = initialFontSize;
+                    table.style.width = initialWidth;
+                });
+            });
+        </script>
     </article>
 
 
 </main>
 <main>
     <article>
-
-
         <div class="g-table">
             <!-- Заголовки колонок -->
             <div class="g-header">Назва</div>
@@ -299,7 +353,6 @@
             <div>One Piece</div>
             <div>Shonen</div>
             <div>Еічіро Ода</div>
-
             <div>Наруто</div>
             <div>Shonen</div>
             <div>Масаші Кішимото</div>
@@ -307,10 +360,11 @@
             <div>Seinen</div>
             <div>Кентаро Міура</div>
         </div>
-
-
+        <button id="changeColorBtn">Змінити колір тексту</button>
     </article>
 </main>
+<script src="script.js"></script>
+
 
 <footer>
     <div class="footer-nav">
@@ -320,5 +374,7 @@
     </div>
     <p>&copy; 2024 Всі права захищені.</p>
 </footer>
+
+
 </body>
 </html>

@@ -1,0 +1,34 @@
+@use 'variables' as v;
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  z-index: 1;
+ // background: url('../images/banner-image.jpg') no-repeat center;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: v.$banner_color;
+  text-align: center;
+  font-size: 2em;
+  z-index: 2;
+}
+.banner-heading {
+  position: absolute;
+  top: 50%; /* Встановлює верхній край елемента на 50% від висоти батьківського контейнера. Це означає, що елемент буде зміщений вниз на половину висоти контейнера. */
+  left: 50%; /* Встановлює лівий край елемента на 50% від ширини батьківського контейнера. Це зміщує елемент вправо на половину ширини контейнера. */
+  color: white; /* Встановлює колір тексту білим. */
+  /*text-transform: uppercase; /* Примусово переводить весь текст у верхній регістр (великі літери). */
+  font-size: 200%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+}

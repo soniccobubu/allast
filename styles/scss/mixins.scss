@@ -1,0 +1,25 @@
+// mixins
+
+
+@mixin block_padding($p_top: '14px', $p_side: 10px){
+  display: block;
+  padding: $p_top $p_side;
+}
+@mixin flex-center($direction: row, $justify: center, $align: center, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin spacing($row-gap: 20px, $column-gap: 20px, $padding: 20px 0) {
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+  padding: $padding;
+}
+
+@mixin full-size {
+  width: 100%;
+  height: 100vh;
+}

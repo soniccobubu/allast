@@ -1,0 +1,79 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@media only screen and (max-width: 600px) {
+  .g-table {
+   width: auto;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));/* 3 колонки одинаковой ширины */
+    gap: 5px; /* Отступы между ячейками */
+    border: 2px solid v.$border_color; /* Граница для всей таблицы */
+    padding: 10px;
+    background-color: v.$background-colormedia;
+  }
+  .g-table {
+   // width: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+    padding: 10px;
+    background-color: v.$background-colormedia;
+  }
+  .g-table {
+    border: 2px solid v.$border_color;
+  }
+
+  .banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: v.$banner_color;
+    text-align: center;
+    font-size: 1em;
+    z-index: 2;
+  }
+
+  .content-section {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+  }
+
+  .image {
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 80%;
+    height: 80%;
+  }
+
+  .grid-table {
+    min-width: 200px; /* Минимальная ширина таблицы */
+  }
+
+  .grid-table th,
+  .grid-table td {
+    font-size: 12px; /* Уменьшаем шрифт */
+    padding: 4px; /* Уменьшаем отступы */
+  }
+
+  .controls input[type="range"] {
+    width: 200px; /* Зменшуємо розмір повзунка */
+  }
+
+  table {
+    width: 100%; /* Таблиця займає 100% ширини екрана */
+    font-size: 14px; /* Зменшуємо розмір шрифту для маленьких екранів */
+  }
+
+  article {
+    overflow-x: auto; /* Додаємо горизонтальну прокрутку, якщо таблиця більша за екран */
+  }
+
+}
+
